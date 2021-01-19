@@ -4,4 +4,4 @@ pandas-datareader==0.9.0
 pandas-gbq==0.13.3
 pandas-profiling==1.4.1
 glob2==0.7
-pdf2image==1.14.0
+
