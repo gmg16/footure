@@ -4,5 +4,6 @@ pandas-datareader==0.9.0
 pandas-gbq==0.13.3
 pandas-profiling==1.4.1
 glob2==0.7
+FROM gcr.io/google-appengine/python
 RUN apt-get install poppler-utils
 pdf2image==1.14.0
