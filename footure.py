@@ -17,7 +17,7 @@ for arquivo in arquivos:
 
 jogadores = list(pd.DataFrame(lista_nomes)[0].unique())
 
-dic_imagens = {}
+dic_imagens = {'Clique aqui para escolher o jogador':'1footurepro.png'}
 for nome in jogadores:
   nome_jogador = nome
   slides = glob.glob(f'{nome_jogador}*.jpg')
@@ -37,7 +37,7 @@ for arquivo in arquivos:
 
 jogadores = list(pd.DataFrame(lista_nomes)[0].unique())
 
-dic_imagens = {}
+dic_imagens = {'Clique aqui para escolher o jogador':'1footurepro.png'}
 for nome in jogadores:
   nome_jogador = nome.split('/')[-1]
   slides = glob.glob(f'analise/{nome_jogador}*.jpg')
