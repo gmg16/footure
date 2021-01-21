@@ -6,8 +6,9 @@ st.title(f'{header}')
 
 import glob as glob
 import pandas as pd
-
+####################################### ANÁLISE DE MERCADO
 arquivos = glob.glob('*.jpg')
+arquivos = sorted(arquivos)
 
 lista_nomes = []
 for arquivo in arquivos:
@@ -24,3 +25,5 @@ for nome in jogadores:
   dic_imagens.update({nome:slides})
 pic = st.selectbox("Análises de Mercado", list(dic_imagens.keys()))
 st.image(dic_imagens[pic], use_column_width=True)
+
+#################################### Analíticos
