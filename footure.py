@@ -42,6 +42,6 @@ for nome in jogadores:
   nome_jogador = nome.split('/')[-1]
   slides = glob.glob(f'analise/{nome_jogador}*.jpg')
   slides = sorted(slides)
-  dic_imagens.update({nome:slides})
+  dic_imagens.update({nome_jogador:slides})
 pic = st.selectbox("Analíticos", list(dic_imagens.keys()))
 st.image(dic_imagens[pic], use_column_width=True)
