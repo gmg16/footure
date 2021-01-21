@@ -39,8 +39,8 @@ jogadores = list(pd.DataFrame(lista_nomes)[0].unique())
 
 dic_imagens = {}
 for nome in jogadores:
-  nome_jogador = nome
-  slides = glob.glob(f'{nome_jogador}*.jpg')
+  nome_jogador = nome.split('/')[-1]
+  slides = glob.glob(f'{analise/nome_jogador}*.jpg')
   slides = sorted(slides)
   dic_imagens.update({nome:slides})
 pic = st.selectbox("Analíticos", list(dic_imagens.keys()))
