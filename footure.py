@@ -45,3 +45,24 @@ for nome in jogadores:
   dic_imagens.update({nome_jogador:slides})
 pic = st.selectbox("Analíticos", list(dic_imagens.keys()))
 st.image(dic_imagens[pic], use_column_width=True)
+################################# Indicações
+arquivos = glob.glob('analise/*.jpg')
+arquivos = sorted(arquivos)
+
+lista_nomes = []
+for arquivo in arquivos:
+  nome = (arquivo.split('_')[0])
+  lista_nomes.append(nome)
+
+jogadores = list(pd.DataFrame(lista_nomes)[0].unique())
+
+dic_imagens = {'Clique aqui para escolher o jogador':'1footurepro.png'}
+for nome in jogadores:
+  nome_jogador = nome.split('/')[-1]
+  slides = glob.glob(f'indicacao/{nome_jogador}*.jpg')
+  slides = sorted(slides)
+  dic_imagens.update({nome_jogador:slides})
+pic = st.selectbox("Analíticos", list(dic_imagens.keys()))
+st.image(dic_imagens[pic], use_column_width=True)
+#############################################
+
