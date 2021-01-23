@@ -46,7 +46,7 @@ for nome in jogadores:
 pic = st.selectbox("Analíticos", list(dic_imagens.keys()))
 st.image(dic_imagens[pic], use_column_width=True)
 ################################# Indicações
-arquivos = glob.glob('analise/*.jpg')
+arquivos = glob.glob('indicacao/*.jpg')
 arquivos = sorted(arquivos)
 
 lista_nomes = []
